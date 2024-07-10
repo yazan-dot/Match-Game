@@ -490,7 +490,7 @@ function flip(ele) {
     if (ali.length === blocks.length) {
       let xxxx = document.querySelector(".winner");
       xxxx.style.cssText = `display:block; transition:0.5s`;
-      document.querySelector(".btn-loser").onclick = function () {
+      document.querySelector(".btn-winner").onclick = function () {
         xxxx.remove();
         location.reload();
       };

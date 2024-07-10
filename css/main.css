@@ -30,7 +30,7 @@
   display: none;
   z-index: 123456;
 }
-.winner .btn-loser {
+.winner .btn-winner {
   font-size: 30px;
   width: 100%;
   padding: 20px;
