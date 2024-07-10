@@ -1,0 +1,22 @@
+:root {
+  --main-color: #03a9f4a1;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
+.btn {
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: default;
+}
+.btn:hover:not(:first-child) {
+  background-color: #03a9f4a1;
+  color: white;
+}
+.btn:hover:first-child {
+  background-color: #ff000069;
+}
+/* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/

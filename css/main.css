@@ -1,0 +1,229 @@
+:root {
+  --main-color: #03a9f4a1;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.3s;
+}
+.login {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3333339a;
+  z-index: 20000;
+}
+.loser {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3333339a;
+  z-index: 20000;
+  display: none;
+  z-index: 123456;
+}
+.login-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn-login {
+  font-size: 30px;
+  width: 100%;
+  padding: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #03a9f4;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+.btn-loser {
+  font-size: 30px;
+  width: 100%;
+  padding: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #e6392d;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+.login h1,
+.loser h1 {
+  color: white;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .game .container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* start setting */
+.setting-box {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  background-color: white;
+  width: 200px;
+  min-height: 100vh;
+  left: -200px;
+  transition: var(--main-duration);
+  z-index: 1000;
+}
+.setting-box .no-spin {
+  position: absolute;
+  right: -35px;
+  top: 125px;
+  padding: 13px;
+  background-color: white;
+  border-radius: 10px;
+}
+.setting-box.close {
+  left: 0;
+}
+/* end setting */
+
+/* start header */
+.header {
+  background-color: var(--secondary-color);
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header img {
+  width: 100px;
+  position: relative;
+  right: 25px;
+}
+
+.header .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 50%;
+}
+.header .your-name {
+  color: white;
+}
+.header .links div {
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .header .links {
+    flex-basis: 83%;
+    font-size: 15px;
+    text-align: center;
+  }
+}
+/* end header */
+
+.game {
+  min-height: calc(100vh - 84.39px);
+  background-color: var(--secondary-color);
+}
+
+.game.noClick {
+  pointer-events: none;
+}
+.game .container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+@media (max-width: 768px) {
+  .game .container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+  }
+}
+.game .card {
+  text-align: center;
+  padding: 40px 10px;
+  background-color: #eee;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.game .card::before {
+  content: "?";
+  position: absolute;
+  background-color: #03a8f4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-size: 100px;
+  transform: translate(-10px, -40px);
+  transition: 0.5s;
+  z-index: 3;
+}
+.game .card.clicked::before,
+.game .card.clicked-two::before {
+  background-color: transparent;
+  content: "";
+}
+.game .clicked-two {
+  background-color: white;
+  content: "";
+}
+.img-lose {
+  /* background-image: url(/images/download.jfif); */
+  background-size: cover;
+  position: absolute;
+  left: 29%;
+  height: 78%;
+  text-align: center;
+  width: 50%;
+}
+footer {
+  position: absolute;
+  left: 37%;
+  bottom: 159px;
+  font-size: 23px;
+  color: white;
+}
