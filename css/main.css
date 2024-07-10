@@ -30,15 +30,15 @@
   display: none;
   z-index: 123456;
 }
-.winner .btn-winner {
-  font-size: 30px;
-  width: 100%;
-  padding: 20px;
-  font-weight: bold;
-  color: white;
-  background-color: #03a9f4;
-  border: 1px solid #eee;
-  cursor: pointer;
+ .btn-winner {
+  font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: #03a9f4;
+    border: 1px solid #eee;
+    cursor: pointer;
+    width: 100%;
 }
 .login-container {
   position: absolute;
