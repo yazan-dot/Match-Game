@@ -21,6 +21,25 @@
   display: none;
   z-index: 123456;
 }
+.winner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3333339a;
+  z-index: 20000;
+  display: none;
+  z-index: 123456;
+}
+.winner .btn-loser {
+  font-size: 30px;
+  width: 100%;
+  padding: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #03a9f4;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
 .login-container {
   position: absolute;
   left: 50%;
@@ -48,7 +67,8 @@
   cursor: pointer;
 }
 .login h1,
-.loser h1 {
+.loser h1 ,
+.winner h1{
   color: white;
 }
 .container {

@@ -484,8 +484,18 @@ function flip(ele) {
   if (z.length === 2) {
     noClick();
     lastCheck(z[0], z[1]);
-    console.log(+z[0].id);
-    console.log(+z[1].id);
+    let ali = blocks.filter(function (ele) {
+      return ele.classList.contains("clicked-two");
+    });
+    if (ali.length === blocks.length) {
+      let xxxx = document.querySelector(".winner");
+      xxxx.style.cssText = `display:block; transition:0.5s`;
+      document.querySelector(".btn-loser").onclick = function () {
+        xxxx.remove();
+        location.reload();
+      };
+    }
+    
     // lastCheck(z[0], z[1]);
   }
 }
